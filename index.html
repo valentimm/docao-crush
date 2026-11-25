@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#7b2f8f">
+<title>Docão Crush</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='55' rx='42' ry='38' fill='%23f5a623'/%3E%3Cellipse cx='50' cy='62' rx='18' ry='13' fill='%23e8742a'/%3E%3Ccircle cx='44' cy='62' r='4' fill='%238a3010'/%3E%3Ccircle cx='56' cy='62' r='4' fill='%238a3010'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="app">
+  <section id="scr-menu" class="screen">
+    <button class="mute corner" aria-label="Som"></button>
+    <div class="logo">Docão<span>Crush</span></div>
+    <div id="menuDocao" class="docao-big" title="Oinc!"></div>
+    <button id="btnPlay" class="btn big">Jogar</button>
+    <p id="menuInfo" class="sub"></p>
+    <p class="credits">Combine bacon, milho, ovo, pimentão, berinjela e cenoura com o Docão</p>
+  </section>
+
+  <section id="scr-map" class="screen hidden">
+    <header class="maphead">
+      <button id="btnMapBack" class="btn small ghost">Menu</button>
+      <div id="mapStars" class="mapstars"></div>
+      <button class="mute" aria-label="Som"></button>
+    </header>
+    <div id="mapScroll"><div id="mapInner"></div></div>
+  </section>
+
+  <section id="scr-game" class="screen hidden">
+    <header class="hud">
+      <div class="hudtop">
+        <button id="btnQuit" class="btn small ghost">Pausa</button>
+        <span id="hudLevel" class="hudlevel">Fase 1</span>
+        <button class="mute" aria-label="Som"></button>
+      </div>
+      <div class="hudmain">
+        <div class="moves"><small>jogadas</small><b id="hudMoves">20</b></div>
+        <div id="hudDocao" class="hudDocao"></div>
+        <div class="goalsbox"><small>objetivo</small><div id="hudGoals" class="hudgoals"></div></div>
+      </div>
+      <div class="scorebar">
+        <span id="hudScore" class="score">0</span>
+        <div class="bar"><div id="hudBar" class="fill"></div><div id="hudStars" class="barstars"></div></div>
+      </div>
+    </header>
+    <div id="boardWrap"><canvas id="board"></canvas></div>
+    <div id="banner"></div>
+  </section>
+
+  <div id="modal" class="modal hidden"><div class="card" id="modalCard"></div></div>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
